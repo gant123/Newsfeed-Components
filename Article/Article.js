@@ -26,4 +26,8 @@ class Article {
 
 */
 
-let articles;
+let articles = document.querySelectorAll(".article");
+
+articles = Array.from(articles).map(function(item) {
+  return new Article(item);
+});
